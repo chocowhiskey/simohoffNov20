@@ -46,16 +46,18 @@ a {
   z-index: 100;
   opacity: 1;
   transform: translate3d(0, 0, 0);
+  height: 90vh;
 }
 
 .home {
   overflow: hidden;
-  height: 100%;
   padding-bottom: 0;
   pointer-events: none;
 }
+
 .page {
   width: 100vw;
+  height: 90vh;
   position: absolute;
   transform: translate3d(0, 20%, 0);
   top: 0px;
@@ -67,6 +69,10 @@ a {
   transition: 0.8s ease-in-out;
 }
 
+.page.hide {
+  display: none;
+}
+
 .home .titles {
   top: 50%;
   left: 50%;
@@ -76,6 +82,7 @@ a {
   text-align: center;
   margin: 0;
   padding: 0;
+  width: max-content;
 }
 
 .home .page-title {
@@ -126,7 +133,7 @@ a {
   padding: 0;
   margin: 0;
   position: fixed;
-  bottom: 20vh;
+  bottom: 5vh;
   width: 100%;
   text-align: center;
   opacity: 0;
@@ -139,7 +146,7 @@ a {
 }
 
 .footer-menu .menu-item {
-  font-size: 5vw;
+  font-size: 3vw;
   padding-left: 3vw;
   padding-right: 3vw;
   display: inline-block;
@@ -148,7 +155,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2vw;
   text-indent: 0.2vw;
-  font-size: 1vw;
   opacity: 0.5;
   padding-right: 4vw;
   padding-left: 4vw;
