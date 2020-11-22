@@ -6,3 +6,4 @@
 * add three.js animation as canvas tag after background div
 * choose a background image for .background
 * fix height of home etc
+* add logic to burger menu when not on home page
