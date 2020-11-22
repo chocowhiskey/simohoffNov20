@@ -1,0 +1,11 @@
+html {
+  color: rgb(232, 230, 227);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 12px;
+  font-family: "future-pt", sans-serif;
+  height: 100%;
+  background-color: #181a1b;
+  scrollbar-color: #202324 #454a4d;
+}
