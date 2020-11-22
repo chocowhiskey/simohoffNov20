@@ -4,7 +4,7 @@ html {
   padding: 0;
   position: relative;
   font-size: 12px;
-  font-family: "future-pt", sans-serif;
+  font-family: "futura-pt", sans-serif;
   /* height: 100%; */
   background-color: #181a1b;
   scrollbar-color: #202324 #454a4d;
@@ -40,6 +40,10 @@ a {
   object-fit: cover;
   opacity: 1;
   background: radial-gradient(circle at 3% 5%, #253239 0%, #0b0c0d 50%);
+}
+
+.show {
+  transition: 0.4s all ease-in-out;
 }
 
 .page.show {
@@ -157,4 +161,100 @@ a {
   padding-right: 4vw;
   padding-left: 4vw;
   user-select: none;
+}
+
+.page-title {
+  font-size: 10vh;
+  white-space: nowrap;
+  position: absolute;
+  top: 12vh;
+  font-family: "futura-pt", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  pointer-events: none;
+  margin: 0 auto;
+  width: 100vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 1vh;
+  font-weight: 100;
+}
+
+.page-subtitle {
+  top: 18vh;
+  font-size: 1.5vh;
+  letter-spacing: 0.5vh;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  pointer-events: none;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  text-align: center;
+}
+
+.page-content {
+  pointer-events: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-top: 15px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+  text-align: center;
+  display: none;
+}
+
+.list {
+  margin-top: 25vh;
+  margin-left: 5vw;
+  width: 95vw;
+}
+
+.list-item {
+  width: 85vw;
+  height: 44vw;
+  float: left;
+  margin: 2.5vw;
+  position: relative;
+}
+
+.tilt {
+  border: 1px solid #222;
+}
+
+.list-item .titles {
+  position: absolute;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: 0.3s all;
+  width: 38.5vw;
+  height: 3vw;
+  padding: 2vw;
+  padding-top: 2vw;
+  padding-top: 1vw;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0px;
+}
+.list-item .title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.1s all;
+  font-size: 1.4vw;
+  font-family: futura-pt;
+}
+
+.list-item img {
+  width: 85vw;
+  height: 44vw;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: 0.5s opacity;
 }
