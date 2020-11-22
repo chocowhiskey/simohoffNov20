@@ -5,7 +5,7 @@ html {
   position: relative;
   font-size: 12px;
   font-family: "future-pt", sans-serif;
-  height: 100%;
+  /* height: 100%; */
   background-color: #181a1b;
   scrollbar-color: #202324 #454a4d;
 }
@@ -43,16 +43,14 @@ a {
 }
 
 .page.show {
-  z-index: 100;
+  z-index: 100 !important;
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  height: 90vh;
 }
 
 .home {
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-bottom: 0;
-  pointer-events: none;
 }
 
 .page {
