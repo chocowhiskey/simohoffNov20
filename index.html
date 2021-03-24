@@ -1,92 +1,613 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simone Hoffmann | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    <meta charset="utf-8" />
+    <meta name="robots" content="follow" />
+    <meta name="author" content="Richard Mattka" />
+    <meta name="copyright" content="2021" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>Simone Hoffmann | Portfolio</title>
+    <!-- og, twitter, share tags -->
+    <meta
+      name="keywords"
+      content="Richard Mattka, Synergy Seeker, synergyseeker, developer, creative, webgl, threejs, 3d, vr, ar, virtual reality, augmented reality, shaders, shader, glsl, graphics, javascript, films, video games, coding, coder, programmer, interactive, designer, webdev, gamedev, webdesign, movies, warof1996, annabelle, wonderwoman, batman, sony, 20th centruy fox, fox, hunger games, lionsgate, new line cinema, warner bros, wb"
+    />
+    <!--<meta property="fb:app_id" content="" />-->
+    <meta property="og:type" content="website" />
+    <meta
+      name="description"
+      content="Richard Mattka is an award-winning creative technologist, director, designer, & motion graphics artist, working across multiple mediums including  Installations, Film, Web, Interactive & Gaming."
+    />
+    <meta property="og:url" content="https://richardmattka.com" />
+    <meta property="og:title" content="Richard Mattka | Portfolio" />
+    <meta
+      property="og:description"
+      content="Richard Mattka is an award-winning creative technologist, director, designer, & motion graphics artist, working across multiple mediums including  Installations, Film, Web, Interactive & Gaming."
+    />
+    <meta
+      property="og:image"
+      content="https://richardmattka.com/assets/images/share-4.jpg"
+    />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@synergyseeker" />
+    <meta name="twitter:title" content="Richard Mattka | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Richard Mattka is an award-winning creative technologist, director, designer, & motion graphics artist, working across multiple mediums including  Installations, Film, Web, Interactive & Gaming."
+    />
+    <meta name="twitter:creator" content="@synergyseeker" />
+    <meta
+      name="twitter:image"
+      content="https://richardmattka.com/assets/images/share-4.jpg"
+    />
+    <!-- end share tags -->
+
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wvh2fzc.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <!-- end styles -->
+
+    <!-- favicons -->
+    <link rel="Shortcut Icon" type="image/ico" href="icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- favicons -->
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- load libs -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/vanilla-tilt.min.js"></script>
+    <script src="libs/instafeed.min.js"></script>
+    <script src="libs/three.min.js"></script>
+    <script src="libs/stats.min.js"></script>
+    <script src="libs/FBXLoader.js"></script>
+    <script src="libs/inflate.min.js"></script>
+    <script src="libs/aos.js"></script>
+
+    <script src="libs/howler.min.js"></script>
+    <script src="libs/TweenMax.min.js"></script>
+
+    <!-- load core scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/webgl.js"></script>
+    <script src="data/site.js"></script>
+    <script src="libs/utils.js"></script>
+
+    <script></script>
   </head>
   <body>
-    <!-- <div id="background" class="background"></div> -->
-    <div class="home page hide">
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-110093496-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-110093496-1");
+    </script>
+    <div class="background" id="background"></div>
+    <canvas id="webgl"></canvas>
+    <!--<video  id="webGLVideo1" crossOrigin="anonymous" webkit-playsinline style="display:none" playsinline class='background-video' src='' loop preload muted="true"></video>-->
+
+    <!-- home -->
+    <div class="home page">
       <div class="titles">
-        <div class="page-title">Simone Hoffmann</div>
-        <div class="page-subtitle">Software Developer</div>
+        <div class="page-title"></div>
+        <div class="page-subtitle"></div>
       </div>
     </div>
-    <div class="footer-menu hide">
-      <ul class="menu-items">
-        <li class="menu-item menu-work" id="work">WORK</li>
-        <li class="menu-item menu-info">INFO</li>
-        <li class="menu-item menu-contact">CONTACT</li>
-      </ul>
+    <div class="footer-menu">
+      <ul class="menu-items"></ul>
     </div>
-    <div class="header show">
-      <div class="menu-button">
-        <i class="fa fa-bars"></i>
-      </div>
-    </div>
+    <!-- end home -->
 
-    <!--- work page --->
-    <div class="work page show">
+    <!-- work -->
+    <div class="work page">
       <div
-        class="page-title aos-init aos-animate"
+        class="page-title"
         data-aos="zoom-in"
+        data-aos-duration="1000"
         data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
         data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div class="list"></div>
+    </div>
+    <!-- end work -->
+
+    <!-- prototypes -->
+    <div class="prototypes page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div class="list"></div>
+    </div>
+    <!-- end prototypes -->
+
+    <!-- art -->
+    <div class="art page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div class="list"></div>
+    </div>
+    <!-- end art -->
+
+    <!-- press -->
+    <div class="press page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div class="list"></div>
+      <div class="interviews-title section-title"></div>
+      <div class="interviews-list list"></div>
+    </div>
+    <!-- end press -->
+
+    <!-- about -->
+    <div class="info page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div
+        data-aos="zoom-in"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="50"
+        data-aos-duration="1000"
+        data-aos-delay="50"
+        class="feature"
       >
-        WORK
+        <div class="feature-content"></div>
       </div>
       <div
-        class="page-subtitle aos-init aos-animate"
-        data-aos="zoom-in"
-        data-aos-delay="400"
+        data-aos="fade-in"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="50"
         data-aos-duration="1000"
-      >
-        PROJECTS
+        data-aos-delay="50"
+        class="bio-title section-title"
+      ></div>
+      <div
+        data-aos="fade-in"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="50"
+        data-aos-duration="1000"
+        data-aos-delay="50"
+        class="bio"
+      ></div>
+      <div class="awards-block info-block">
+        <div
+          data-aos="fade-in"
+          data-aos-easing="ease-in-out"
+          data-aos-offset="50"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+          class="awards-title section-title"
+        ></div>
+        <div class="awards-list"></div>
       </div>
-      <div class="page-content"></div>
-      <div class="list">
+      <div class="clients-block info-block">
         <div
-          class="list-item work-item right aos-init aos-animate"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-easing="ease-in-out"
+          data-aos-offset="50"
           data-aos-duration="1000"
-        >
-          <div class="tilt">
-            <img src="images/alpacando.png" alt="alpacando" />
-            <div class="titles">
-              <div class="title">
-                Alpacando - Improve your life. Rent an alpaca
-              </div>
-            </div>
-          </div>
-        </div>
+          data-aos-delay="50"
+          class="clients-title section-title"
+        ></div>
+        <div class="clients-list"></div>
+      </div>
+      <div
+        data-aos="fade-in"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="50"
+        data-aos-duration="1000"
+        data-aos-delay="50"
+        class="instafeed-title section-title"
+      ></div>
+      <div
+        data-aos="fade-in"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="50"
+        data-aos-duration="1000"
+        data-aos-delay="50"
+        id="instafeed"
+      ></div>
+      <!--
+		<div class="twitter-title section-title"></div>
+		
+		<a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" data-chrome='noheader, nofooter,  transparent, noscrollbar'  data-link-color="#2B7BB9" href="https://twitter.com/synergyseeker?ref_src=twsrc%5Etfw">Tweets by synergyseeker</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		-->
+      <div class="social-block info-block">
         <div
-          class="list-item work-item right aos-init aos-animate"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-easing="ease-in-out"
+          data-aos-offset="50"
           data-aos-duration="1000"
-        >
-          <div class="tilt">
-            <img src="images/matcher.gif" alt="matcher.gif" />
-            <div class="titles">
-              <div class="title">
-                Matcher - Matching at conferences made easy
-              </div>
-            </div>
-          </div>
-        </div>
+          data-aos-delay="50"
+          class="social-title section-title"
+        ></div>
+        <div class="social-list"></div>
       </div>
     </div>
+    <!-- end about -->
 
-    <script src="main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-      AOS.init();
+    <!-- contact-->
+    <div class="contact page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="page-content"></div>
+      <div class="list"></div>
+      <div class="locations-title"></div>
+      <div class="locations"></div>
+      <div class="links"></div>
+    </div>
+    <!-- end contact -->
+
+    <!-- work detail -->
+    <div class="work-detail page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="feature" data-aos="fade-in">
+        <div class="feature-content"></div>
+      </div>
+      <div class="next-button" data-aos="fade-left">
+        <img class="next-button-circle" src="assets/images/circle.svg" />
+        <img class="next-button-arrow" src="assets/images/arrow.svg" />
+      </div>
+      <div class="client" data-aos="fade-in"></div>
+      <div class="role" data-aos="fade-in"></div>
+      <div class="content-title section-title" data-aos="fade-in"></div>
+
+      <div class="content" data-aos="fade-in"></div>
+
+      <div class="awards-block info-block" data-aos="fade-in">
+        <div class="awards-title section-title"></div>
+        <div class="awards-list"></div>
+      </div>
+      <div class="press-block info-block" data-aos="fade-in">
+        <div class="press-title section-title"></div>
+        <div class="press-list"></div>
+      </div>
+      <div class="links-block info-block" data-aos="fade-in">
+        <div class="links-title"></div>
+        <div class="links-list"></div>
+      </div>
+      <div class="social-block info-block" data-aos="fade-in">
+        <div class="social-title section-title"></div>
+        <div class="social-list">
+          <img
+            class="social-link share-page-twitter list-item"
+            src="assets/images/twitter.png"
+          />
+          <img
+            class="social-link share-page-facebook list-item"
+            src="assets/images/facebook.png"
+          />
+        </div>
+      </div>
+      <div class="media-block info-block" data-aos="fade-in">
+        <div class="media-title section-title"></div>
+        <div class="media-list"></div>
+      </div>
+      <div class="related-title section-title" data-aos="fade-in"></div>
+      <div class="related-list" data-aos="fade-in"></div>
+      <div class="bottom-nav">
+        <div class="bottom-back">&#8672; prev</div>
+        <div class="bottom-up">back to work</div>
+        <div class="bottom-next">next &#8674;</div>
+      </div>
+    </div>
+    <!-- end work detail -->
+
+    <!-- press detail -->
+    <div class="press-detail page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="feature" data-aos="fade-in">
+        <div class="feature-content"></div>
+      </div>
+      <div class="next-button" data-aos="fade-left">
+        <img class="next-button-circle" src="assets/images/circle.svg" />
+        <img class="next-button-arrow" src="assets/images/arrow.svg" />
+      </div>
+      <div class="content-title section-title" data-aos="fade-in"></div>
+      <div class="content" data-aos="fade-in"></div>
+      <div class="links-block info-block" data-aos="fade-in">
+        <div class="links-title"></div>
+        <div class="links-list"></div>
+      </div>
+      <div class="social-block info-block" data-aos="fade-in">
+        <div class="social-title section-title"></div>
+        <div class="social-list">
+          <img
+            class="social-link share-page-twitter list-item"
+            src="assets/images/twitter.png"
+          />
+          <img
+            class="social-link share-page-facebook list-item"
+            src="assets/images/facebook.png"
+          />
+        </div>
+      </div>
+      <div class="media-block info-block" data-aos="fade-in">
+        <div class="media-title section-title"></div>
+        <div class="media-list"></div>
+      </div>
+      <div class="related-title section-title" data-aos="fade-in"></div>
+      <div class="related-list" data-aos="fade-in"></div>
+      <div class="bottom-nav">
+        <div class="bottom-back">&#8672; prev</div>
+        <div class="bottom-up">back to press</div>
+        <div class="bottom-next">next &#8674;</div>
+      </div>
+    </div>
+    <!-- end press detail -->
+
+    <!-- prototypes detail -->
+    <div class="prototypes-detail page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="feature" data-aos="fade-in">
+        <div class="feature-content"></div>
+      </div>
+      <div class="next-button" data-aos="fade-left">
+        <img class="next-button-circle" src="assets/images/circle.svg" />
+        <img class="next-button-arrow" src="assets/images/arrow.svg" />
+      </div>
+      <!--<div class="client" data-aos='fade-in'></div>
+		<div class="role" data-aos='fade-in'></div>-->
+      <div class="content-title section-title" data-aos="fade-in"></div>
+
+      <div class="content" data-aos="fade-in"></div>
+
+      <div class="awards-block info-block" data-aos="fade-in">
+        <div class="awards-title section-title"></div>
+        <div class="awards-list"></div>
+      </div>
+      <div class="press-block info-block" data-aos="fade-in">
+        <div class="press-title section-title"></div>
+        <div class="press-list"></div>
+      </div>
+      <div class="links-block info-block" data-aos="fade-in">
+        <div class="links-title"></div>
+        <div class="links-list"></div>
+      </div>
+      <div class="social-block info-block" data-aos="fade-in">
+        <div class="social-title section-title"></div>
+        <div class="social-list">
+          <img
+            class="social-link share-page-twitter list-item"
+            src="assets/images/twitter.png"
+          />
+          <img
+            class="social-link share-page-facebook list-item"
+            src="assets/images/facebook.png"
+          />
+        </div>
+      </div>
+      <div class="media-block info-block" data-aos="fade-in">
+        <div class="media-title section-title"></div>
+        <div class="media-list"></div>
+      </div>
+      <div class="related-title section-title" data-aos="fade-in"></div>
+      <div class="related-list" data-aos="fade-in"></div>
+      <div class="bottom-nav">
+        <div class="bottom-back">&#8672; prev</div>
+        <div class="bottom-up">back to prototypes</div>
+        <div class="bottom-next">next &#8674;</div>
+      </div>
+    </div>
+    <!-- end prototypes detail -->
+
+    <!-- art detail -->
+    <div class="art-detail page">
+      <div
+        class="page-title"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        class="page-subtitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div class="feature" data-aos="fade-in">
+        <div class="feature-content"></div>
+      </div>
+      <div class="next-button" data-aos="fade-left">
+        <img class="next-button-circle" src="assets/images/circle.svg" />
+        <img class="next-button-arrow" src="assets/images/arrow.svg" />
+      </div>
+      <div class="content-title section-title" data-aos="fade-in"></div>
+
+      <div class="content" data-aos="fade-in"></div>
+
+      <div class="awards-block info-block" data-aos="fade-in">
+        <div class="awards-title section-title"></div>
+        <div class="awards-list"></div>
+      </div>
+      <div class="press-block info-block" data-aos="fade-in">
+        <div class="press-title section-title"></div>
+        <div class="press-list"></div>
+      </div>
+      <div class="links-block info-block" data-aos="fade-in">
+        <div class="links-title"></div>
+        <div class="links-list"></div>
+      </div>
+      <div class="social-block info-block" data-aos="fade-in">
+        <div class="social-title section-title"></div>
+        <div class="social-list">
+          <img
+            class="social-link share-page-twitter list-item"
+            src="assets/images/twitter.png"
+          />
+          <img
+            class="social-link share-page-facebook list-item"
+            src="assets/images/facebook.png"
+          />
+        </div>
+      </div>
+      <div class="media-block info-block" data-aos="fade-in">
+        <div class="media-title section-title"></div>
+        <div class="media-list"></div>
+      </div>
+      <div class="related-title section-title" data-aos="fade-in"></div>
+      <div class="related-list" data-aos="fade-in"></div>
+      <div class="bottom-nav">
+        <div class="bottom-back">&#8672; prev</div>
+        <div class="bottom-up">back to art</div>
+        <div class="bottom-next">next &#8674;</div>
+      </div>
+    </div>
+    <!-- end art detail -->
+
+    <!-- menu -->
+    <div class="menu">
+      <ul class="menu-items"></ul>
+    </div>
+    <!-- end menu -->
+    <!-- header -->
+    <div class="header">
+      <div class="header-title"></div>
+      <img class="logo" src="assets/images/alien.svg" />
+      <div class="header-menu">
+        <ul class="menu-items"></ul>
+      </div>
+      <div class="menu-button">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- end header -->
+
+    <!-- loader -->
+    <div class="loader"></div>
+    <!--<img class="loader-icon" src='assets/images/loader.gif' />-->
+    <!-- end loader -->
+    <!-- bars -->
+    <div class="top-bar"></div>
+    <div class="bottom-bar"></div>
+    <!-- bars -->
+    <div class="footer-sound">
+      <span id="bar-1" class="sbar"></span>
+      <span id="bar-2" class="sbar"></span>
+      <span id="bar-3" class="sbar"></span>
+      <span id="bar-4" class="sbar"></span>
+    </div>
+    <div id="reel">
+      <div class="reel-video"></div>
+      <div class="close-button close"></div>
+    </div>
+
+    <script>
+      APP.init();
     </script>
   </body>
 </html>
